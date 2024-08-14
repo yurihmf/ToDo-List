@@ -1,0 +1,76 @@
+.task, .taskCompleted {
+    width: 100%;
+    display: flex;
+    gap: .75rem;
+    padding: 1rem;
+    background-color: var(--gray-500);
+    border-radius: 8px;
+}
+
+.task {
+    box-shadow: inset 0px 0px 0px 1px var(--gray-400);
+}
+
+.completeTask, .deleteTask {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+}
+
+
+.completeTask {
+    color: var(--blue);
+    position: relative;
+}
+
+.completeTask::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: var(--blue-dark);
+    opacity: .20;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.completeTask:hover, .completeTask:focus-within {
+    color: var(--blue-dark);
+}
+
+.completeTask:hover::before, .completeTask:focus-within {
+    visibility: visible;
+}
+
+.text {
+    flex: 1;
+    color: var(--gray-100);
+    font-size: .875rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.deleteTask {
+    color: var(--gray-300);
+}
+
+.deleteTask:hover, .deleteTask:focus {
+    color: var(--danger);
+    background-color: var(--gray-400);
+}
+
+.taskCompleted > .text {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}

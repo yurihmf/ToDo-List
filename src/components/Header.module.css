@@ -1,0 +1,31 @@
+.header {
+    width: 100%;
+    height: 12.5rem;
+    background: var(--gray-700);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    height: 3rem;
+}
+
+.logo > svg {
+    color: var(--blue);
+}
+
+.logoText {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--blue);
+    line-height: 1.2;
+}
+
+.logoText > span {
+    color: var(--purple-dark);
+}
